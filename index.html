@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helima 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #84fab0);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(255,255,255,0.95);
+        flex-direction: column;
+        width: 200px;
+        border-radius: 15px;
+        display: none;
+    }
+
+    .nav-links a {
+        color: #ff3e6c;
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero {
+    margin-top: 120px;
+    color: white;
+}
+
+img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    margin-top: 20px;
+}
+
+/* STORY CARDS */
+.card {
+    background: rgba(255,255,255,0.9);
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 650px;
+    border-radius: 20px;
+    line-height: 1.6;
+}
+
+/* LIKE GRID */
+.like-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.like-box {
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    line-height: 1.5;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.like-box:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* BOX COLORS */
+.box1 { background: linear-gradient(45deg, #ff6f91, #ff3e6c); }
+.box2 { background: linear-gradient(45deg, #a18cd1, #6dd5ed); }
+.box3 { background: linear-gradient(45deg, #fbc2eb, #a6c1ee); }
+.box4 { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+.box5 { background: linear-gradient(45deg, #84fab0, #8fd3f4); }
+.box6 { background: linear-gradient(45deg, #fccb90, #d57eeb); }
+
+/* BUTTON */
+button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff3e6c;
+    color: white;
+    cursor: pointer;
+}
+
+/* MESSAGE */
+#finalMessage {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff3e6c;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(255,255,255,0.3);
+    color: white;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="logo">💖 Helima</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#about">What I Like</a>
+        <a href="#message">Message</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>Hi Helima 💕</h1>
+    <p>This is something special I made just for you...</p>
+    <img src="image/aa6c6be9-889c-4317-a3fa-d9276d99e2d2.jpeg" alt="Helima">
+</section>
+
+<!-- STORY -->
+<section id="story">
+    <h2>🏁 Our Story</h2>
+
+    <div class="card">
+        It all started during the Safari Rally 🏁…  
+        In the middle of all that excitement, I met you.
+    </div>
+
+    <div class="card">
+        What I thought would be just a simple meeting turned into something more…  
+        We talked, laughed, and spent most of that day together.
+    </div>
+
+    <div class="card">
+        And honestly, it didn’t even feel long…  
+        It felt natural, like I had known you for a long time already.
+    </div>
+
+    <div class="card">
+        Since that day, you’ve stayed on my mind…  
+        and I’m really glad that moment happened.
+    </div>
+</section>
+
+<!-- WHAT I LIKE -->
+<section id="about">
+    <h2>💖 What I Like About You</h2>
+
+    <div class="like-grid">
+
+        <div class="like-box box1">
+            😊 Your smile — it can completely change my mood instantly.
+        </div>
+
+        <div class="like-box box2">
+            💬 Talking to you — it feels so natural and easy.
+        </div>
+
+        <div class="like-box box3">
+            🌟 Your energy — calm, beautiful, and comforting.
+        </div>
+
+        <div class="like-box box4">
+            😂 Our laughs — some of my favorite moments ever.
+        </div>
+
+        <div class="like-box box5">
+            ❤️ The way you make me feel — happy, calm, and real.
+        </div>
+
+        <div class="like-box box6">
+            ✨ Everything about you — it’s just you, and that’s enough.
+        </div>
+
+    </div>
+</section>
+
+<!-- MESSAGE -->
+<section id="message">
+    <h2>💌 Something I Want to Tell You</h2>
+    <p>I’ve been thinking about this for a while...</p>
+
+    <button onclick="showMessage()">Click 💖</button>
+
+    <div id="finalMessage">
+        Helima Khavy… ❤️ <br><br>
+        I really like you… more than just a friend. 💖 <br><br>
+        And I mean that in the most genuine way possible.
+    </div>
+</section>
+
+<footer>
+    Made with ❤️ just for you, Helima
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("finalMessage").style.display = "block";
+}
+
+function toggleMenu() {
+    var menu = document.getElementById("navLinks");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+
+</body>
+</html>
